@@ -3,6 +3,11 @@ uuid = "c2151afe-c86c-4874-9033-b829a0b69537"
 authors = ["Matt Helm <mthelm85@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+JSON2 = "2535ab7d-5cd8-5a07-80ac-9b1792aadce3"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Tables = "bd369af6-aec1-5ad0-b16a-f7cc5008161c"
+
 [compat]
 julia = "1"
 
