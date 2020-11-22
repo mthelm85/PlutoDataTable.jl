@@ -16,9 +16,9 @@ Display `table` as an interactive data table. `table` is any tabular data struct
 function data_table(table; items_per_page = 10)
 	app_id = randstring('a':'z')
 	d = Dict(
-    "headers" => [Dict("text" => string(name), "value" => string(name)) for name in Tables.columnnames(table)],
-    "data" => [Dict(string(name) => row[name] for name in Tables.columnnames(table)) for row in Tables.rows(table)]
-)
+        "headers" => [Dict("text" => string(name), "value" => string(name)) for name in Tables.columnnames(table)],
+        "data" => [Dict(string(name) => string(row[name]) for name in Tables.columnnames(table)) for row in Tables.rows(table)]
+    )
 	djson = JSON2.write(d)
 	
 	return HTML("""
